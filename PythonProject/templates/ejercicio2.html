@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="caja">
+        <form action="/ejercicio2" method="POST">
+            <h2>Inicio de sesión</h2>
+
+            <label>Ingresa tu nombre</label>
+            <input type="text" name="nombre" pattern="^[A-Za-záéíóúÁÉÍÓÚ\s]+$" required>
+            <br>
+
+            <label>Ingresa tu contraseña</label>
+            <input type="text" name="contraseña">
+            <br>
+
+            <input class="botones" type="submit" value="Verificar">
+            <br>
+
+        </form>
+
+        {% if mensaje %}
+        <div>
+
+        <p>{{mensaje}}</p>
+
+        </div>
+        {% endif %}
+
+
+    </div>
+</body>
+</html>
